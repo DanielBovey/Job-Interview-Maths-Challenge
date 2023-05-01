@@ -1,0 +1,119 @@
+body {
+    background-color: rgb(1, 4, 18);
+}
+
+.start-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    text-align: center;
+    box-shadow: 0 0 6px green;
+    border: solid rgba(0, 128, 0, 0.305) 1px;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    color: white;
+    background-color: rgb(7, 7, 7);
+    padding: 5px 10px;
+}
+
+.countdown-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    padding: 0 10px;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.countdown-container p {
+    color: white;
+    font-size: 60px;
+}
+
+.move-off {
+    position: relative;
+    animation-name: move-off;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-off {
+    from {left: 0; }
+    to {left: -150%; }
+}
+
+.move-on {
+    position: relative;
+    animation-name: move-on;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-on {
+    from {left: 150%;}
+    to {left: 0;}    
+}
+
+#question {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 10px;
+    border-radius: 10%;
+    font-size: 40px;
+}
+
+#answer-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#answer-buttons button {
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 28px;
+    text-align: center;
+    box-shadow: 0 0 6px green;
+    border: solid rgba(0, 128, 0, 0.305) 1px;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    color: white;
+    background-color: rgb(7, 7, 7);
+    padding: 5px 10px;
+}
+
+#answer-buttons button:hover {
+    cursor: pointer;
+}
+
+#answer-buttons button:last-child {
+    margin-right: 0;
+}
+
+.timer {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: green;
+    font-size: 26px;
+}
+
+.game-over {
+    position: absolute;
+    color: white;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
